@@ -1,6 +1,6 @@
 import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { ArrowRight, Check } from "lucide-react";
-import { getService, services } from "@/data/nexus";
+import { getService, services, type Service } from "@/data/nexus";
 import { PageHero } from "@/components/site/page-hero";
 import { Reveal, SectionHeading } from "@/components/site/reveal";
 import { FinalCta } from "@/components/site/case-studies";
@@ -34,7 +34,7 @@ export const Route = createFileRoute("/services/$slug")({
 });
 
 function ServicePage() {
-  const { service: s } = Route.useLoaderData();
+  const { service: s } = Route.useLoaderData() as { service: Service };
 
   return (
     <>
