@@ -1,24 +1,61 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/site/hero";
+import { TrustedBy, ProcessSection } from "@/components/site/trust-process";
+import { DashboardPreview } from "@/components/site/dashboard-preview";
+import { ServicesSection } from "@/components/site/services-section";
+import { Recommender } from "@/components/site/recommender";
+import { CaseStudiesSection, FinalCta } from "@/components/site/case-studies";
+import { FaqAssistant } from "@/components/site/faq-assistant";
+import { PricingSection } from "@/components/site/pricing-section";
+import { FoundersMessage } from "@/components/site/footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Nexus AI Systems — Replacing Sales Teams with AI";
+const description =
+  "Enterprise AI automation. Nexus designs, deploys, and operates AI sales agents, calling agents, and revenue systems inside your existing CRM and telephony stack.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Nexus AI Systems",
+          description,
+          url: "/",
+          slogan: "Replacing sales teams with intelligent AI systems.",
+        }),
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Hero />
+      <TrustedBy />
+      <DashboardPreview />
+      <ServicesSection />
+      <ProcessSection />
+      <Recommender />
+      <CaseStudiesSection compact />
+      <FaqAssistant />
+      <PricingSection />
+      <FoundersMessage />
+      <FinalCta />
+    </>
   );
 }
