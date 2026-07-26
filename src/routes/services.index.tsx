@@ -10,7 +10,7 @@ const title = "AI Services — Nexus AI Systems";
 const description =
   "Twelve production AI disciplines: sales agents, calling agents, appointment setting, CRM and workflow automation, chatbots, custom systems, and consulting.";
 
-export const Route = createFileRoute("/services")({
+export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
       { title },
