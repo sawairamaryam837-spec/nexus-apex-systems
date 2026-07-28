@@ -228,7 +228,7 @@ export function DashboardPreview() {
                   <p className="font-display text-sm font-semibold text-ink">Activity feed</p>
                   <p className="font-mono text-[0.62rem] text-muted-foreground">live</p>
                 </div>
-                <ul className="mt-4 grid gap-2">
+                <ul className="mt-4 grid min-w-0 grid-cols-1 gap-2 [&>li]:min-w-0">
                   {feed.slice(0, 5).map((f, i) => (
                     <motion.li
                       key={`${tick}-${f.text}`}
