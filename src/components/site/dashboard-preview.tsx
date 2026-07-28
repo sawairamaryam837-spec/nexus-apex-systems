@@ -112,17 +112,19 @@ export function DashboardPreview() {
               </div>
             </div>
 
-            <div className="grid gap-5 p-5 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-4 p-4 sm:gap-5 sm:p-5 md:grid-cols-2 lg:grid-cols-4 [&>*]:min-w-0">
               <Kpi label="Revenue generated" value={`$${revenue.toFixed(2)}M`} delta="+18.4%" />
               <Kpi label="Qualified leads" value={Math.round(leads).toLocaleString()} delta="+11.2%" />
               <Kpi label="AI calls today" value={Math.round(calls).toLocaleString()} delta="+6.9%" />
               <Kpi label="ROI" value={`${Math.round(roi)}%`} delta="+42 pts" />
 
-              <div className="rounded-xl border border-border bg-background p-5 lg:col-span-2">
-                <div className="flex items-center justify-between">
+              <div className="min-w-0 rounded-xl border border-border bg-background p-4 sm:p-5 md:col-span-2 lg:col-span-2">
+
+                <div className="flex flex-wrap items-center justify-between gap-2">
                   <p className="font-display text-sm font-semibold text-ink">Pipeline value</p>
-                  <p className="font-mono text-[0.65rem] text-muted-foreground">Last 7 months · $M</p>
+                  <p className="font-mono text-[0.6rem] text-muted-foreground sm:text-[0.65rem]">Last 7 months · $M</p>
                 </div>
+
                 <div className="mt-4 h-52">
                   <ResponsiveContainer width="100%" height="100%">
                     <AreaChart data={revenueSeries} margin={{ left: -22, right: 6, top: 6 }}>
@@ -220,12 +222,13 @@ export function DashboardPreview() {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-border bg-background p-5 lg:col-span-2">
+              <div className="min-w-0 rounded-xl border border-border bg-background p-4 sm:p-5 md:col-span-2 lg:col-span-2">
+
                 <div className="flex items-center justify-between">
                   <p className="font-display text-sm font-semibold text-ink">Activity feed</p>
                   <p className="font-mono text-[0.62rem] text-muted-foreground">live</p>
                 </div>
-                <ul className="mt-4 grid gap-2">
+                <ul className="mt-4 grid min-w-0 grid-cols-1 gap-2 [&>li]:min-w-0">
                   {feed.slice(0, 5).map((f, i) => (
                     <motion.li
                       key={`${tick}-${f.text}`}
@@ -244,7 +247,7 @@ export function DashboardPreview() {
                 </ul>
               </div>
 
-              <div className="rounded-xl border border-border bg-background p-5 lg:col-span-2">
+              <div className="min-w-0 rounded-xl border border-border bg-background p-4 sm:p-5 md:col-span-2 lg:col-span-2">
                 <p className="font-display text-sm font-semibold text-ink">Cost displaced</p>
                 <div className="mt-4 grid grid-cols-2 gap-4">
                   {[
