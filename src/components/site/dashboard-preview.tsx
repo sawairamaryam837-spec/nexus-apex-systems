@@ -118,7 +118,8 @@ export function DashboardPreview() {
               <Kpi label="AI calls today" value={Math.round(calls).toLocaleString()} delta="+6.9%" />
               <Kpi label="ROI" value={`${Math.round(roi)}%`} delta="+42 pts" />
 
-              <div className="rounded-xl border border-border bg-background p-5 lg:col-span-2">
+              <div className="min-w-0 rounded-xl border border-border bg-background p-4 sm:p-5 md:col-span-2 lg:col-span-2">
+
                 <div className="flex items-center justify-between">
                   <p className="font-display text-sm font-semibold text-ink">Pipeline value</p>
                   <p className="font-mono text-[0.65rem] text-muted-foreground">Last 7 months · $M</p>
