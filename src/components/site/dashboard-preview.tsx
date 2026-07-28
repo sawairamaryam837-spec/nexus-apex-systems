@@ -221,7 +221,8 @@ export function DashboardPreview() {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-border bg-background p-5 lg:col-span-2">
+              <div className="min-w-0 rounded-xl border border-border bg-background p-4 sm:p-5 md:col-span-2 lg:col-span-2">
+
                 <div className="flex items-center justify-between">
                   <p className="font-display text-sm font-semibold text-ink">Activity feed</p>
                   <p className="font-mono text-[0.62rem] text-muted-foreground">live</p>
