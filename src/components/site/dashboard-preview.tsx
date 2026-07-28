@@ -246,7 +246,7 @@ export function DashboardPreview() {
                 </ul>
               </div>
 
-              <div className="rounded-xl border border-border bg-background p-5 lg:col-span-2">
+              <div className="min-w-0 rounded-xl border border-border bg-background p-4 sm:p-5 md:col-span-2 lg:col-span-2">
                 <p className="font-display text-sm font-semibold text-ink">Cost displaced</p>
                 <div className="mt-4 grid grid-cols-2 gap-4">
                   {[
