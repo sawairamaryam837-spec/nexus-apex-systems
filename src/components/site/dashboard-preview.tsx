@@ -112,7 +112,7 @@ export function DashboardPreview() {
               </div>
             </div>
 
-            <div className="grid gap-5 p-5 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-4 p-4 sm:gap-5 sm:p-5 md:grid-cols-2 lg:grid-cols-4 [&>*]:min-w-0">
               <Kpi label="Revenue generated" value={`$${revenue.toFixed(2)}M`} delta="+18.4%" />
               <Kpi label="Qualified leads" value={Math.round(leads).toLocaleString()} delta="+11.2%" />
               <Kpi label="AI calls today" value={Math.round(calls).toLocaleString()} delta="+6.9%" />
