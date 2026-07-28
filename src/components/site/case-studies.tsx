@@ -2,9 +2,13 @@ import { Reveal, SectionHeading } from "./reveal";
 import { motion } from "motion/react";
 import { Quote, Play, TrendingUp } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+import case1 from "@/assets/case-1.jpg";
+import case2 from "@/assets/case-2.jpg";
+import case3 from "@/assets/case-3.jpg";
 
 export const caseStudies = [
   {
+    poster: case1,
     company: "Meridian Logistics",
     industry: "Freight & logistics",
     quote:
