@@ -27,6 +27,7 @@ export const caseStudies = [
     ],
   },
   {
+    poster: case2,
     company: "Northline Insurance",
     industry: "Insurance",
     quote:
@@ -45,6 +46,7 @@ export const caseStudies = [
     ],
   },
   {
+    poster: case3,
     company: "Verido Software",
     industry: "B2B SaaS",
     quote:
