@@ -120,10 +120,11 @@ export function DashboardPreview() {
 
               <div className="min-w-0 rounded-xl border border-border bg-background p-4 sm:p-5 md:col-span-2 lg:col-span-2">
 
-                <div className="flex items-center justify-between">
+                <div className="flex flex-wrap items-center justify-between gap-2">
                   <p className="font-display text-sm font-semibold text-ink">Pipeline value</p>
-                  <p className="font-mono text-[0.65rem] text-muted-foreground">Last 7 months · $M</p>
+                  <p className="font-mono text-[0.6rem] text-muted-foreground sm:text-[0.65rem]">Last 7 months · $M</p>
                 </div>
+
                 <div className="mt-4 h-52">
                   <ResponsiveContainer width="100%" height="100%">
                     <AreaChart data={revenueSeries} margin={{ left: -22, right: 6, top: 6 }}>
