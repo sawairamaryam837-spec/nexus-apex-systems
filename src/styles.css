@@ -116,29 +116,36 @@
 }
 
 .dark {
-  --background: oklch(0.16 0.018 262);
-  --surface: oklch(0.2 0.02 262);
-  --foreground: oklch(0.97 0.003 258);
-  --ink: oklch(0.99 0.002 260);
-  --card: oklch(0.2 0.02 262);
-  --card-foreground: oklch(0.97 0.003 258);
-  --popover: oklch(0.2 0.02 262);
-  --popover-foreground: oklch(0.97 0.003 258);
-  --primary: oklch(0.68 0.16 265);
-  --primary-foreground: oklch(0.15 0.02 262);
-  --violet: oklch(0.7 0.16 293);
-  --secondary: oklch(0.26 0.022 262);
-  --secondary-foreground: oklch(0.97 0.003 258);
-  --muted: oklch(0.26 0.022 262);
-  --muted-foreground: oklch(0.7 0.015 258);
-  --accent: oklch(0.28 0.04 265);
-  --accent-foreground: oklch(0.92 0.03 265);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 14%);
-  --ring: oklch(0.68 0.16 265);
-  --sidebar: oklch(0.2 0.02 262);
-  --sidebar-foreground: oklch(0.97 0.003 258);
-  --sidebar-border: oklch(1 0 0 / 10%);
+  --background: oklch(0.17 0.045 262);
+  --surface: oklch(0.22 0.05 262);
+  --foreground: oklch(0.95 0.012 250);
+  --ink: oklch(0.99 0.004 250);
+  --card: oklch(0.215 0.05 262);
+  --card-foreground: oklch(0.95 0.012 250);
+  --popover: oklch(0.215 0.05 262);
+  --popover-foreground: oklch(0.95 0.012 250);
+  --primary: oklch(0.68 0.16 252);
+  --primary-foreground: oklch(0.15 0.045 262);
+  --violet: oklch(0.68 0.15 275);
+  --secondary: oklch(0.27 0.05 262);
+  --secondary-foreground: oklch(0.95 0.012 250);
+  --muted: oklch(0.27 0.05 262);
+  --muted-foreground: oklch(0.72 0.03 250);
+  --accent: oklch(0.3 0.07 258);
+  --accent-foreground: oklch(0.92 0.05 252);
+  --border: oklch(0.68 0.12 255 / 18%);
+  --input: oklch(0.68 0.12 255 / 22%);
+  --ring: oklch(0.68 0.16 252);
+  --chart-1: oklch(0.68 0.16 252);
+  --chart-2: oklch(0.68 0.15 275);
+  --chart-3: oklch(0.74 0.11 230);
+  --chart-4: oklch(0.6 0.1 255);
+  --chart-5: oklch(0.7 0.12 205);
+  --sidebar: oklch(0.215 0.05 262);
+  --sidebar-foreground: oklch(0.95 0.012 250);
+  --sidebar-border: oklch(0.68 0.12 255 / 18%);
+  --shadow-soft: 0 1px 2px oklch(0.05 0.03 262 / 0.5), 0 8px 24px -12px oklch(0.05 0.03 262 / 0.7);
+  --shadow-lift: 0 1px 2px oklch(0.05 0.03 262 / 0.5), 0 24px 60px -28px oklch(0.05 0.03 262 / 0.9);
 }
 
 @layer base {

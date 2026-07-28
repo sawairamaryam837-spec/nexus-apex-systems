@@ -2,9 +2,13 @@ import { Reveal, SectionHeading } from "./reveal";
 import { motion } from "motion/react";
 import { Quote, Play, TrendingUp } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+import case1 from "@/assets/case-1.jpg";
+import case2 from "@/assets/case-2.jpg";
+import case3 from "@/assets/case-3.jpg";
 
 export const caseStudies = [
   {
+    poster: case1,
     company: "Meridian Logistics",
     industry: "Freight & logistics",
     quote:
@@ -23,6 +27,7 @@ export const caseStudies = [
     ],
   },
   {
+    poster: case2,
     company: "Northline Insurance",
     industry: "Insurance",
     quote:
@@ -41,6 +46,7 @@ export const caseStudies = [
     ],
   },
   {
+    poster: case3,
     company: "Verido Software",
     industry: "B2B SaaS",
     quote:
@@ -87,16 +93,27 @@ export function CaseStudiesSection({ compact = false }: { compact?: boolean }) {
                   </span>
                 </div>
 
-                <div className="mt-5 aspect-video overflow-hidden rounded-xl border border-border bg-surface">
-                  <div className="grid h-full place-items-center">
+                <div className="relative mt-5 aspect-video overflow-hidden rounded-xl border border-border bg-surface">
+                  <img
+                    src={c.poster}
+                    alt={`${c.person}, ${c.role} at ${c.company}, video testimonial`}
+                    loading="lazy"
+                    width={1280}
+                    height={720}
+                    className="h-full w-full object-cover"
+                  />
+                  <div className="absolute inset-0 grid place-items-center bg-ink/35">
                     <button
                       type="button"
-                      className="group grid h-12 w-12 place-items-center rounded-full border border-border bg-background transition-all hover:shadow-[var(--shadow-glow)]"
+                      className="group grid h-14 w-14 place-items-center rounded-full border border-border bg-background/90 backdrop-blur transition-all hover:shadow-[var(--shadow-glow)]"
                       aria-label={`Play ${c.company} testimonial`}
                     >
-                      <Play className="h-4 w-4 text-primary transition-transform group-hover:scale-110" />
+                      <Play className="h-5 w-5 text-primary transition-transform group-hover:scale-110" />
                     </button>
                   </div>
+                  <span className="absolute bottom-2 right-2 rounded-full bg-ink/70 px-2.5 py-1 font-mono text-[0.58rem] uppercase tracking-[0.12em] text-background">
+                    Video · 2 min
+                  </span>
                 </div>
 
                 <Quote className="mt-6 h-4 w-4 text-primary" />

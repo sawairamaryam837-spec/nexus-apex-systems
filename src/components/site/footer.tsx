@@ -3,6 +3,7 @@ import { Linkedin, Twitter, Github, ArrowRight, MapPin } from "lucide-react";
 import { services } from "@/data/nexus";
 import { Logo } from "./logo";
 import { Reveal } from "./reveal";
+import founderImg from "@/assets/founder.jpg";
 
 export function FoundersMessage() {
   return (
@@ -12,18 +13,17 @@ export function FoundersMessage() {
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
             <div>
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-surface">
-                <div className="grid h-full place-items-center">
-                  <div className="text-center">
-                    <div
-                      className="mx-auto grid h-24 w-24 place-items-center rounded-full text-2xl font-bold text-primary-foreground"
-                      style={{ background: "var(--gradient-accent)" }}
-                      aria-hidden
-                    >
-                      JR
-                    </div>
-                    <p className="mt-5 font-display text-sm font-semibold text-ink">Julian Reyes</p>
-                    <p className="mt-1 text-xs text-muted-foreground">Founder & Chief Executive</p>
-                  </div>
+                <img
+                  src={founderImg}
+                  alt="Julian Reyes, Founder and Chief Executive of Nexus AI Systems"
+                  loading="lazy"
+                  width={912}
+                  height={1136}
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 to-transparent p-5">
+                  <p className="font-display text-sm font-semibold text-background">Julian Reyes</p>
+                  <p className="mt-1 text-xs text-background/70">Founder &amp; Chief Executive</p>
                 </div>
               </div>
               <a
