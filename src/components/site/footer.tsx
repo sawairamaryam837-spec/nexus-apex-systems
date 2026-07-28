@@ -3,6 +3,7 @@ import { Linkedin, Twitter, Github, ArrowRight, MapPin } from "lucide-react";
 import { services } from "@/data/nexus";
 import { Logo } from "./logo";
 import { Reveal } from "./reveal";
+import founderImg from "@/assets/founder.jpg";
 
 export function FoundersMessage() {
   return (
